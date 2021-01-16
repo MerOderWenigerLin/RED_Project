@@ -9,12 +9,14 @@ import {AppRoutingModule} from "./app.routing.module";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {LayoutModule} from "./core/layout/layout.module";
 import { SearchComponent } from './search/search.component';
+import { StackOverflowQuestionsComponent } from './dashboard/stack-overflow-questions/stack-overflow-questions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SearchComponent
+    SearchComponent,
+    StackOverflowQuestionsComponent
   ],
   imports: [
     BrowserModule,

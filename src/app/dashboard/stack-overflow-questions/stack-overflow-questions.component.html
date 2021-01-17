@@ -1,5 +1,6 @@
-<p>
-  stack-overflow-questions works!
-</p>
-
-<div *ngFor="let searchResult of searchResults">{{searchResult.title}}</div>
+<div *ngFor="let searchResult of searchResults">
+  <div class="headline">
+    <span>{{searchResult.creation_date * 1000 | date}}</span>
+  </div>
+  <a class="question" target="_blank" [href]="searchResult.link">{{searchResult.title}}</a>
+</div>

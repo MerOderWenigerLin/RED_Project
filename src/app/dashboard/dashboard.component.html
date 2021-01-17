@@ -1,5 +1,5 @@
 <div class="dashboard">
   <app-stack-overflow-questions question="TypeScript" pagesize="10"></app-stack-overflow-questions>
   <app-stack-overflow-questions question="Angular2" pagesize="10"></app-stack-overflow-questions>
-  <app-stack-overflow-questions question="Weather" pagesize="5"></app-stack-overflow-questions>
+  <app-stack-overflow-questions question="Weather" [pagesize]="weatherPageSize" [weatherData]="weatherData"></app-stack-overflow-questions>
 </div>

@@ -1,8 +1,31 @@
 <div class="headline">Results for "{{question}}"</div>
 
-<div class="question" *ngFor="let searchResult of searchResults">
+<div class="question" *ngFor="let searchResult of searchResults; index as i">
   <div class="question-headline">
     <span>{{searchResult.creation_date * 1000 | date}}</span>
   </div>
-  <a  target="_blank" [href]="searchResult.link">{{searchResult.title}}</a>
+  <div>
+    <a target="_blank" [href]="searchResult.link">{{searchResult.title}}</a>
+  </div>
+  <div *ngIf="!!weatherData[i]">
+    <div class="headline">Weather Data from "{{weatherData[i].date}}"</div>
+    <app-weather-row
+      title1="Wind"
+      [value1]="weatherData[i].wind"
+      title2="Temperature"
+      [value2]="weatherData[i].tempA"
+    ></app-weather-row>
+    <app-weather-row
+      title1="Direction"
+      [value1]="weatherData[i].direction"
+      title2="Air pressure"
+      [value2]="weatherData[i].airPressure"
+    ></app-weather-row>
+    <app-weather-row
+      title1="Rain"
+      [value1]="weatherData[i].rain"
+      title2="Humidity"
+      [value2]="weatherData[i].humidityA"
+    ></app-weather-row>
+  </div>
 </div>

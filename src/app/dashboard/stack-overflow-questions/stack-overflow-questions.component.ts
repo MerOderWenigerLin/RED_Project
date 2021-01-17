@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {SearchService} from '../../core/services/stack-overflow/search.service';
 import {SearchResultItem} from '../../core/services/stack-overflow/search-result-item';
+import {WeatherDataItem} from '../../core/services/weather-data/weather-data-item';
 
 @Component({
   selector: 'app-stack-overflow-questions',
@@ -11,6 +12,7 @@ export class StackOverflowQuestionsComponent implements OnInit {
 
   @Input() question = '';
   @Input() pagesize = 0;
+  @Input() weatherData: WeatherDataItem[] = [];
   searchResults: SearchResultItem[] = [];
 
   constructor(private service: SearchService) {
@@ -19,7 +21,6 @@ export class StackOverflowQuestionsComponent implements OnInit {
   ngOnInit() {
     this.service.search(this.question, this.pagesize).subscribe(response => {
       this.searchResults = response.items;
-      console.log(response);
     });
   }
 

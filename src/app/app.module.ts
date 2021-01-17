@@ -10,13 +10,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {LayoutModule} from "./core/layout/layout.module";
 import { SearchComponent } from './search/search.component';
 import { StackOverflowQuestionsComponent } from './dashboard/stack-overflow-questions/stack-overflow-questions.component';
+import { WeatherRowComponent } from './dashboard/stack-overflow-questions/weather-row/weather-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     SearchComponent,
-    StackOverflowQuestionsComponent
+    StackOverflowQuestionsComponent,
+    WeatherRowComponent
   ],
   imports: [
     BrowserModule,

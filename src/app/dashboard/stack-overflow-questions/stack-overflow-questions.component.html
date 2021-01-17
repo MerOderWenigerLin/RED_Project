@@ -1,5 +1,7 @@
+<div class="headline">Results for "{{question}}"</div>
+
 <div *ngFor="let searchResult of searchResults">
-  <div class="headline">
+  <div class="question-headline">
     <span>{{searchResult.creation_date * 1000 | date}}</span>
   </div>
   <a class="question" target="_blank" [href]="searchResult.link">{{searchResult.title}}</a>

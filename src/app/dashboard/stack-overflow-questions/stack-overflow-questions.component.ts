@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {SearchService} from '../../core/services/search.service';
 import {SearchResultItem} from '../../core/services/SearchResultItem';
 
@@ -9,14 +9,17 @@ import {SearchResultItem} from '../../core/services/SearchResultItem';
 })
 export class StackOverflowQuestionsComponent implements OnInit {
 
+  @Input() question = '';
+  @Input() pagesize = 0;
   searchResults: SearchResultItem[] = [];
 
   constructor(private service: SearchService) {
   }
 
   ngOnInit() {
-    this.service.search('TypeScript').subscribe(response => {
+    this.service.search(this.question, this.pagesize).subscribe(response => {
       this.searchResults = response.items;
+      console.log(response);
     });
   }
 

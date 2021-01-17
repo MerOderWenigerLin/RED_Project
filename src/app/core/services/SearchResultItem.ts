@@ -1,4 +1,8 @@
 export interface SearchResultItem {
+  owner: any;
+  last_edit_date: number;
+  question_id: number;
+  content_license: string;
   answer_count: number;
   closed_date: number;
   closed_reason: string;

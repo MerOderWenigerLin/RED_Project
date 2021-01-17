@@ -458,7 +458,7 @@ export class SearchService {
           'link': 'https://stackoverflow.com/questions/65751894/edit-typescript-before-angular-compiler',
           'title': 'Edit typescript before angular compiler'
         }], 'has_more': true, 'quota_max': 300, 'quota_remaining': 285
-      });
+      } as StackOverflowResponse);
       subscriber.complete();
     });
   }

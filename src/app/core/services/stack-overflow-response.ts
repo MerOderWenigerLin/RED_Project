@@ -1,4 +1,4 @@
-import {SearchResultItem} from './SearchResultItem';
+import {SearchResultItem} from './search-result-item';
 
 export interface StackOverflowResponse {
   has_more: boolean;

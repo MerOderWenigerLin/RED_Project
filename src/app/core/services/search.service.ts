@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs';
-import {StackOverflowResponse} from './StackOverflowResponse';
+import {StackOverflowResponse} from './stack-overflow-response';
 import {environment} from '../../../environments/environment';
 
 @Injectable()

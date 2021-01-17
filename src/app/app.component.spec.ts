@@ -6,7 +6,7 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {SearchComponent} from "./search/search.component";
 import {AppRoutingModule} from "./app.routing.module";
 import {APP_BASE_HREF} from "@angular/common";
-import {SearchService} from "./core/services/search.service";
+import {SearchService} from "./core/services/stack-overflow/search.service";
 import {HttpModule} from "@angular/http";
 
 describe('AppComponent', () => {

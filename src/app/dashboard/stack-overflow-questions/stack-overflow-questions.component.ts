@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {SearchService} from '../../core/services/search.service';
-import {SearchResultItem} from '../../core/services/search-result-item';
+import {SearchService} from '../../core/services/stack-overflow/search.service';
+import {SearchResultItem} from '../../core/services/stack-overflow/search-result-item';
 
 @Component({
   selector: 'app-stack-overflow-questions',
